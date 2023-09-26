@@ -26,7 +26,7 @@ class PostController extends Controller
         Post::latest()->paginate(5);
 
         //render view with posts
-        return view('index', compact('posts'));
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -36,7 +36,7 @@ class PostController extends Controller
      */
     public function create(): View
     {
-        return view('create');
+        return view('posts.create');
     }
  
     /**
